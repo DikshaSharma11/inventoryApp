@@ -12,7 +12,6 @@ const ItemSchema = new Schema({
   src: { type: String, required: false },
 });
 
-L
 ItemSchema.virtual("url").get(function () {
   return "/item/" + this._id;
 });
