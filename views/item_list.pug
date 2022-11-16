@@ -1,13 +1,11 @@
 extends layout 
 
 block content 
-
     div.wrapper
-        h1 #{category.name}
-        p #{category.desc}
+        h1= title 
 
         div.list-wrapper
-            each item in items 
+            each item in item_list 
                 div.list-card
                     a(href=item.url) 
                         img(src=item.src).list-card-img
@@ -20,6 +18,7 @@ block content
 
             else 
                 p There are no items.
+
         hr
         p
-            a(href=category.url+'/update') Update category
+            a(href='/item/create') Create item
